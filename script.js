@@ -45,6 +45,7 @@ function saveDrawing() {
     .then((data) => {
       if (data.success) {
         alert("Drawing saved successfully!");
+        clearDrawing();
       } else {
         alert("Error saving drawing.");
       }
@@ -52,4 +53,12 @@ function saveDrawing() {
     .catch((error) => {
       console.error("Error saving drawing:", error);
     });
+}
+
+const clearButton = document.getElementById("clearButton");
+
+clearButton.addEventListener("click", clearDrawing);
+
+function clearDrawing() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
