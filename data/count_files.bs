@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Loop through each directory in the current directory
+for dir in */; do
+    file_count=$(ls "$dir" | wc -w)
+    echo "Folder '$dir' contains $file_count files."
+done
+
+exit
