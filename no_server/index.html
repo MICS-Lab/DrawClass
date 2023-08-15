@@ -64,28 +64,18 @@
         saveButton.addEventListener("click", saveDrawing);
 
         function saveDrawing() {
-            const dataURL = canvas.toDataURL("image/png");
-            const formData = new FormData();
-            formData.append("imageType", "drawing");
-            formData.append("imageData", dataURL);
-
-            fetch("save_image.php", {
-                method: "POST",
-                body: formData,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    if (data.success) {
-                        alert("Drawing saved successfully!");
-                        clearDrawing();
-                    } else {
-                        alert("Error saving drawing.");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error saving drawing:", error);
-                });
-        }
+        const dataURL = canvas.toDataURL("image/png");
+        // Create an "a" element to act as a download link
+        const downloadLink = document.createElement("a");
+        downloadLink.href = dataURL;
+        downloadLink.download = "drawing.png"; // Set the default file name
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+        // Simulate a click on the download link to trigger the download
+        downloadLink.click();
+        // Clean up: remove the download link from the DOM
+        document.body.removeChild(downloadLink);
+    }
 
         const clearButton = document.getElementById("clearButton");
 
