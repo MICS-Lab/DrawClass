@@ -2,6 +2,8 @@
 
 A small app to draw images of given classes.
 We have 4 classes: "Circle", "Square", "Triangle", and "Other"; this code may be re-used with other classes (just edit the pages).
+The goal is to have human data to feed the small online shape recognizer available here: https://pauldubois98.github.io/webForward/shape.
+The repo of that online shape recognizer is: https://github.com/pauldubois98/webForward.
 
 ## Drawing links: SERVER
 
