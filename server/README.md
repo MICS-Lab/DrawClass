@@ -20,6 +20,7 @@
 - SSH host: ssh-formslabels.alwaysdata.net
 - user: formslabels
 - psw: Pa\*\*Cent\*\*le
+- command line: `$ ssh formslabels@ssh-formslabels.alwaysdata.net`
 
 ### FTP
 
