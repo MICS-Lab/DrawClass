@@ -1,6 +1,7 @@
 # Draw Class
 
 A small app to draw images of given classes.
+We have 4 classes: "Circle", "Square", "Triangle", and "Other"; this code may be re-used with other classes (just edit the pages).
 
 ## Drawing links: SERVER
 
