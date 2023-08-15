@@ -14,3 +14,9 @@
 - admin panel: https://admin.alwaysdata.com/
 - user: p.dubois@centralesupelec.fr
 - psw: Pa\*\*Cent\*\*le
+
+### SSH connection:
+
+- SSH host: ssh-formslabels.alwaysdata.net
+- user: formslabels
+- psw: Pa\*\*Cent\*\*le
