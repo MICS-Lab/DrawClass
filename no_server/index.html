@@ -64,18 +64,20 @@
         saveButton.addEventListener("click", saveDrawing);
 
         function saveDrawing() {
-        const dataURL = canvas.toDataURL("image/png");
-        // Create an "a" element to act as a download link
-        const downloadLink = document.createElement("a");
-        downloadLink.href = dataURL;
-        downloadLink.download = "drawing.png"; // Set the default file name
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-        // Simulate a click on the download link to trigger the download
-        downloadLink.click();
-        // Clean up: remove the download link from the DOM
-        document.body.removeChild(downloadLink);
-    }
+            const dataURL = canvas.toDataURL("image/png");
+            // Create an "a" element to act as a download link
+            const downloadLink = document.createElement("a");
+            downloadLink.href = dataURL;
+            const d = new Date();
+            var time = Math.round(new Date().getTime() / 1000);
+            downloadLink.download = "drawing" + time + ".png"; // Set the file name to class + timestamp
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+            // Simulate a click on the download link to trigger the download
+            downloadLink.click();
+            // Clean up: remove the download link from the DOM
+            document.body.removeChild(downloadLink);
+        }
 
         const clearButton = document.getElementById("clearButton");
 
