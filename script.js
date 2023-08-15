@@ -7,6 +7,9 @@ let drawing = false;
 canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", stopDrawing);
+canvas.addEventListener("pointerdown", startDrawing);
+canvas.addEventListener("pointermove", draw);
+canvas.addEventListener("pointerup", stopDrawing);
 
 function startDrawing(e) {
   drawing = true;
