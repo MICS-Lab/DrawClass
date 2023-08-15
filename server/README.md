@@ -15,8 +15,14 @@
 - user: p.dubois@centralesupelec.fr
 - psw: Pa\*\*Cent\*\*le
 
-### SSH connection:
+### SSH
 
 - SSH host: ssh-formslabels.alwaysdata.net
+- user: formslabels
+- psw: Pa\*\*Cent\*\*le
+
+### FTP
+
+- FTP host: ftp-formslabels.alwaysdata.net
 - user: formslabels
 - psw: Pa\*\*Cent\*\*le
